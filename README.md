@@ -34,13 +34,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+An adaptive website changes the size of its content to respond to the changes in size of the viewport. A fully responsive website will not only change the size of its content, but modify the layout and other aspects of the page's content to provide a better experience for the viewport size.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Conceptually, it describes what platform your base level design is for, from which modifications are made for it to fit on other platforms.
+
+Practically, it is the difference between using largely `min-width` and `max-width` media queries, respectively.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+The defualt font size on most browsers is `16px`. Setting the font size to `62.5%` results in a `10px` font. The `rem` unit scales off of this font size, making it very similar to working directly in pixels. For example. `1.6rem` would be equal to `16px`.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+For a long time CSS did not have variables. However, we could imagine writing a small program that looks for a special syntax of my choosing, perhaps `@variable-name`, and replaces all instance of that variable name with a value I set elsewhere. You could even do this with find/replace in your code editor. Over time, you expand the functionality of this program to recognize more and more shorthand. You can't add any features to CSS this way, as it all needs to be replaced by CSS that works, but you can make writing it an easier experience.
+
+That is exactly what a preprocessor does. In the case of LESS and SASS, it results in a language very close to CSS, but with some convenience added. Then, it is run through a program that translates the shorthand into CSS. In general, preprocessors expand certain syntax in code to a format that can be read by the compiler, interpretor or engine that actually works with the code.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite concept in preprocessing is mixins. I prefer to write software in a general and composable style, and having that in CSS is so nice.
+
+The thing that gives me the most trouble is a common one: deciding on the correct level of abstraction. It would be very easy to arrive at a point where you can write incredibly concise and modular CSS using mixins and other advances capabilities, but abandon all readability without digging through less file after less file.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
