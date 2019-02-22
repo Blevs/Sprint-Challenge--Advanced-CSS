@@ -256,6 +256,12 @@ footer {
   border-radius: 5px;
   border: solid 2px #dee2e6;
   display: block;
+  transition: border 0.3s;
+}
+.modal .modal-content form input[type=text]:focus,
+.modal .modal-content form select:focus,
+.modal .modal-content form textarea:focus {
+  border: solid 2px lightblue;
 }
 .modal .modal-content form select {
   background-color: white;
@@ -311,6 +317,92 @@ footer {
   color: #f24528;
   text-decoration: none;
   cursor: pointer;
+}
+.sign-in {
+  padding-top: 100px;
+}
+.sign-in .img-container {
+  overflow: hidden;
+  border-radius: 5px;
+  max-width: 100%;
+}
+.sign-in .img-container img {
+  max-width: 100%;
+  transition: transform 0.6s ease;
+}
+.sign-in .img-container img:hover,
+.sign-in .img-container img:focus {
+  transform: scale(1.1) translate(0, -5%);
+}
+.sign-in .sign-in-content h2 {
+  padding: 15px 0;
+}
+.sign-in .sign-in-content .sign-in-form {
+  width: 90%;
+  margin: auto;
+  max-width: 400px;
+}
+.sign-in .sign-in-content .sign-in-form label {
+  font-size: 1.8rem;
+}
+.sign-in .sign-in-content .sign-in-form input[type=text],
+.sign-in .sign-in-content .sign-in-form input[type=password] {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 7px 0 10px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 5px;
+  border: solid 2px #dee2e6;
+  display: block;
+  transition: border 0.3s;
+}
+.sign-in .sign-in-content .sign-in-form input[type=text]:focus,
+.sign-in .sign-in-content .sign-in-form input[type=password]:focus {
+  border: solid 2px lightblue;
+}
+.sign-in .sign-in-content .sign-in-form input[type=submit] {
+  margin-top: 10px;
+  color: #F6F6F6;
+  background-color: #22283A;
+  width: 100%;
+  padding: 9px 0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  border: 1px solid #22283A;
+  transition: color 0.3s, background-color 0.3s;
+}
+.sign-in .sign-in-content .sign-in-form input[type=submit]:hover {
+  color: #22283A;
+  background-color: #F6F6F6;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .sign-in .sign-in-content .sign-in-form input[type=submit] {
+    color: #F6F6F6;
+    background-color: #22283A;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    border: 1px solid #22283A;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  .sign-in .sign-in-content .sign-in-form input[type=submit]:hover {
+    color: #22283A;
+    background-color: #F6F6F6;
+    cursor: pointer;
+  }
+}
+.sign-in footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 800px;
 }
 .home {
   padding-top: 100px;
