@@ -445,6 +445,11 @@ footer {
   height: 100%;
 }
 @media (max-width: 500px) {
+  .home .space-images .img-container img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
   .home .space-images .img-container {
     display: none;
   }
