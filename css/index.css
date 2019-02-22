@@ -1,3 +1,8 @@
+@media (max-width: 500px) {
+  .full-mb {
+    width: 100%;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -214,11 +219,26 @@ footer {
   flex-wrap: wrap;
   width: 100%;
 }
+@media (max-width: 500px) {
+  .home .space-images {
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .home .space-images img {
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images img {
+    display: none;
+  }
+  .home .space-images img:first-child {
+    display: block;
+    width: 90%;
+  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -236,11 +256,28 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    flex-direction: column-reverse;
+    margin-top: 39px;
+    padding: 20px 20px;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+  }
+}
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text h3 {
+    margin-top: 20px;
+  }
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
@@ -260,9 +297,36 @@ footer {
   color: #22283A;
   background-color: #F6F6F6;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    color: #F6F6F6;
+    background-color: #22283A;
+    width: 100%;
+    padding: 26px 0;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    border: 1px solid #22283A;
+  }
+  .home .walk .walk-text .btn:hover {
+    color: #22283A;
+    background-color: #F6F6F6;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    margin-left: 0;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;
