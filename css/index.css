@@ -160,6 +160,35 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.navigation {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #F6F6F6;
+  align-items: center;
+  font-family: #454A59;
+  border-bottom: 1px solid #F1F1F1;
+}
+.navigation h2 {
+  font-size: 4rem;
+}
+.navigation nav {
+  width: 375px;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation nav a {
+  color: black;
+  font-size: 1.6rem;
+}
+.navigation nav a:hover {
+  color: #f24528;
+}
+.navigation nav a:link {
+  text-decoration: none;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
