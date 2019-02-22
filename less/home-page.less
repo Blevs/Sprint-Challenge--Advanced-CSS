@@ -3,9 +3,18 @@
 .home {
   padding-top: @nav-height;
 
+  .img-container {
+    overflow: hidden;
+    img {
+      transition: transform 0.6s ease;
+      &:hover, &:focus {
+        transform: scale(1.1) translate(0, -5%);
+      }
+    }
+  }
   .intro {
 
-    img {
+    .img-container {
       border-radius: 5px;
       max-width: 100%;
     }
@@ -29,7 +38,7 @@
       flex-direction: column;
     }
 
-    img {
+    .img-container {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
@@ -92,6 +101,10 @@
       }
     }
 
+    .img-container {
+        border-radius: 10px;
+    }
+
     .walk-img {
       width: 46%;
       margin-left: 4%;
@@ -101,9 +114,9 @@
       }
       
       img {
+        border-radius: 10px;
         width: 100%;
         height: auto;
-        border-radius: 10px;
       }
     }
   }
