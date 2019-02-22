@@ -185,8 +185,10 @@ p {
 }
 .navigation .nav-content nav {
   width: 375px;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .navigation .nav-content nav a {
   color: black;
@@ -207,6 +209,101 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(69, 74, 89, 0.5);
+}
+.modal .modal-content {
+  background-color: #F1F1F1;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  max-width: 600px;
+  width: 90%;
+}
+@media (max-width: 500px) {
+  .modal .modal-content {
+    margin: 20px auto;
+  }
+}
+.modal .modal-content form h2 {
+  margin-bottom: 10px;
+}
+.modal .modal-content form label {
+  font-size: 1.8rem;
+}
+.modal .modal-content form input[type=text],
+.modal .modal-content form select,
+.modal .modal-content form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 7px 0 10px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 5px;
+  border: solid 2px #dee2e6;
+  display: block;
+}
+.modal .modal-content form select {
+  background-color: white;
+}
+.modal .modal-content form .message {
+  height: 200px;
+}
+.modal .modal-content form input[type=submit] {
+  margin-top: 10px;
+  color: #F6F6F6;
+  background-color: #22283A;
+  width: 100%;
+  padding: 9px 0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  border: 1px solid #22283A;
+}
+.modal .modal-content form input[type=submit]:hover {
+  color: #22283A;
+  background-color: #F6F6F6;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .modal .modal-content form input[type=submit] {
+    color: #F6F6F6;
+    background-color: #22283A;
+    width: 100%;
+    padding: 26px 0;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    border: 1px solid #22283A;
+  }
+  .modal .modal-content form input[type=submit]:hover {
+    color: #22283A;
+    background-color: #F6F6F6;
+    cursor: pointer;
+  }
+}
+.modal .modal-content .close {
+  color: #22283A;
+  float: right;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.modal .modal-content .close:hover,
+.modal .modal-content .close:focus {
+  color: #f24528;
+  text-decoration: none;
+  cursor: pointer;
 }
 .home {
   padding-top: 100px;
@@ -303,6 +400,7 @@ footer {
 .home .walk .walk-text .btn:hover {
   color: #22283A;
   background-color: #F6F6F6;
+  cursor: pointer;
 }
 @media (max-width: 500px) {
   .home .walk .walk-text .btn {
@@ -319,6 +417,7 @@ footer {
   .home .walk .walk-text .btn:hover {
     color: #22283A;
     background-color: #F6F6F6;
+    cursor: pointer;
   }
 }
 .home .walk .walk-img {
