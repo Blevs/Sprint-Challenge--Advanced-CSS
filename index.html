@@ -8,6 +8,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Russo+One|Ubuntu" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/index.js"></script>
+
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -16,22 +19,70 @@
 
 <body>
 
- <!-- navigation code here -->
+  <div id="sign-up-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="close">&times;</span>
+      <form>
+        <label><h2>Sign Up</h2></label>
+        <label>Name</label>
+        <input name="name" type="text">
+        <label>Email</label>
+        <input name="email" type="text">
+        <label>Address</label>
+        <input name="address" type="text">
+        <label>Address Line 2</label>
+        <input name="address-2" type="text">
+        <label>City</label>
+        <input name="city" type="text">
+        <label>State, Province or Region</label>
+        <input name="region" type="text">
+        <label>Zip or Postal Code</label>
+        <input name="zip" type="text">
+        <label>Country</label>
+        <select name="country">
+          <option value="lorem">Lorem</option>
+          <option value="ipsum">Ipsum</option>
+          <option value="dolor">Dolor</option>
+        </select>
+        <input type="submit" value="Subscribe!">
+      </form>
+    </div>
+  </div>
+
+  <header class="navigation">
+    <div class="nav-content">
+      <h2>SpaceWalkers</h2>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <a href="signin.html">Sign In</a>
+      </nav>
+    </div>
+  </header>
 
   <div class="container home">
 
     <header class="intro">
-       <!-- image code here -->
-
+      <div class="img-container">
+        <img src="img/main-header.png">
+      </div>
       <h2>Lift Off</h2>
     
       <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would fall apart. Seeing this has to change a man.</p>
     </header>
 
     <section class="space-images">
+      <div class="img-container">
         <img src="img/blast.png" class="blast" alt="Rocket blasting off">
+      </div>
+      <div class="img-container">
         <img src="img/sky.png" class="sky" alt="Space sky image">
+      </div>
+      <div class="img-container">
         <img src="img/launch.png" class="launch" alt="Launching rocket">
+      </div>
     </section>
    
     <section class="visit-planets">
@@ -51,12 +102,12 @@
       
         <p>Suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth.</p>
       
-        <div class="btn">
+        <div class="btn" id="sign-up">
           Sign Up
         </div>
       </div>
       
-      <div class="walk-img">
+      <div class="walk-img img-container">
           <img src="img/space-walk.png" alt="Space walking astronaut">
       </div>
 

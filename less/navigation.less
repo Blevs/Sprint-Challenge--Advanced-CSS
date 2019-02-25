@@ -1,1 +1,45 @@
-// Navigation code here
+.navigation {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  
+  .nav-content {
+    width: 100%;
+    height: @nav-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: fade(@nav-bg, 80%);
+    align-items: center;
+    font-family: @nav-font;
+    border-bottom: 1px solid @nav-border;
+
+    h2 {
+      font-size: 4.0rem;
+    }
+
+    nav {
+      width: 375px;
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      a {
+        color: black;
+        font-size: 1.6rem;
+        transition: 0.3s;
+
+        &:hover {
+          color: @link-hover;
+        }
+
+        &:link {
+          text-decoration: none;
+        }
+      }
+    }
+    
+  }
+
+}
